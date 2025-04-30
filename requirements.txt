@@ -5,3 +5,4 @@ pandas
 matplotlib
 altair
 entmax
+git+https://github.com/deep-spin/sparse-activations-cp
