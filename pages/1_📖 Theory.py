@@ -147,9 +147,16 @@ with tab1:
         selection = st.radio(
             "Non-conformity score (**s**)",
             options=option_map.keys(),
+            help='''
+             - $\\bm{z}=f(\\bm{x})$: model predictions assumed to be sorted in descending order, $z_1 \ge z_2 \ge ... \ge z_K$
+             - $k(y)$: the index of label $y$ in the sorted array $\\bm{z}$
+            ''',
             format_func=lambda option: option_map[option],
             horizontal=False,
-            captions=['test','test','test','test']
+            captions=[r'$s(x,y)=1-\text{softmax}_y(x)$',
+                      r'$s(x,y) = \sum_{k=1}^{k(y)-1} (z_k - z_{k(y)})$',
+                      r'$s(x,y) = \|\bm{z}_{1:k(y)}-z_{k(y)}\mathbf{1}\|_2$',
+                      r'$s(x,y) = \|\bm{z}_{1:k(y)}-z_{k(y)}\mathbf{1}\|_\infty = z_1 - z_{k(y)}= \log \frac{p_1}{p_{k(y)}}$']
             )
         alpha = 1 - st.slider(r'Confidence Level (**$1-\alpha$**)', 
                                 min_value=0.9, 
