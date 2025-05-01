@@ -50,7 +50,7 @@ with col2:
     st.image('images/authors/calem.jpeg',use_container_width=True)
     st.markdown('[João Calém](https://scholar.google.com/citations?user=F1bblH4AAAAJ&hl=en)')
 with col3:
-    st.image('images/authors/sophia.png',use_container_width=True)
+    st.image('images/authors/sophia.jpeg',use_container_width=True)
     st.markdown('[Sophia Sklaviadis](https://scholar.google.com/citations?user=wkFXjGAAAAAJ&hl=en)')
 with col4:
     st.image('images/authors/mario.jpg',use_container_width=True)
