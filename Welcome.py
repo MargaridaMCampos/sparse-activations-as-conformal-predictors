@@ -29,6 +29,8 @@ st.markdown('# Sparse Activations as Conformal Predictors')
 col1, col2 = st.columns([0.7,0.3],gap='large')
 
 with col1:
+    st.markdown('')
+    st.markdown('')
     st.markdown('''Our paper uncovers a novel connection between conformal prediction and sparse *softmax-like* transformations.''')
     st.markdown('''This website is meant to help the interested reader in understanding the core
                 concepts used.  

@@ -128,7 +128,8 @@ with tab1:
     st.markdown('#### Set Prediction with Guarantees')
     col1, col2 = st.columns([0.5,0.5],gap = 'large')
     with col1:
-        st.markdown(''' - a conformal predictor outputs **prediction sets** 
+        st.markdown('''You get:''')
+        st.markdown(''' - a conformal predictor that outputs **prediction sets** 
                     guaranteed to contain the ground truth with a user-chosen confidence level:''')
         st.latex('''\mathbb{P}\\big(Y_\\text{test}\in \mathcal{C}_\\alpha(X_\\text{test})\\big)\geq 1- \\alpha''')
         st.markdown(''' - model-agnostic and distribution-free framework''')
@@ -163,14 +164,17 @@ with tab1:
                                 max_value=0.99)
     
     with st.sidebar:
-        st.write('''**Sample**''')
-        index = st.session_state.index
-        fig, ax = plt.subplots()
-        ax.imshow(examples_info['samples'][index]['example'])
-        ax.set_xticks([])
-        ax.set_yticks([])
-        st.pyplot(fig, use_container_width=False)
-        st.write(f"Label: **{examples_info['classes'][examples_info['samples'][index]['example_label'].item()]}**")
+        
+        col1,col2,col3 = st.columns([0.3,0.5,0.3])
+        with col2:
+            #st.write("<b style='text-align: center; color: grey;'>Sample</b>", unsafe_allow_html=True)
+            index = st.session_state.index
+            fig, ax = plt.subplots()
+            ax.imshow(examples_info['samples'][index]['example'])
+            ax.set_xticks([])
+            ax.set_yticks([])
+            st.pyplot(fig, use_container_width=False)
+            st.markdown(r"$y_\text{true}$" +f": **{examples_info['classes'][examples_info['samples'][index]['example_label'].item()]}**")
             
 
     threshold = compute_quantile(cp_info['cal_scores'], selection, alpha)
