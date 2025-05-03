@@ -1,19 +1,20 @@
-# :earth_americas: GDP dashboard template
+# Sparse Activations as Conformal Predictors - Demo App
 
-A simple Streamlit app showing the GDP of different countries in the world.
+Website showcasing the paper ["Sparse Activations as Conformal Predictors"](https://arxiv.org/pdf/2502.14773):
+ - interactive theoretical background
+ - interactive demo of introduced relationship
+ - definition of novel scores
+ - experimental results
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://gdp-dashboard-template.streamlit.app/)
+#### Citation 
+```
+@inproceedings{campos2025sparseactivationsconformalpredictors,
+  title={Sparse Activations as Conformal Predictors},
+  author={Margarida M. Campos and João Calém and Sophia Sklaviadis and M{\'a}rio A. T. Figueiredo and Andr{\'e} F. T. Martins},
+  booktitle={International Conference on Artificial Intelligence and Statistics},
+  year={2025}
+}
+```
 
-### How to run it on your own machine
-
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+#### Contact  
+For any additional information or problem reporting, please contact: <margarida.campos@tecnico.ulisboa.pt>.
