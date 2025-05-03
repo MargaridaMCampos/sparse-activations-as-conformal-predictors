@@ -60,11 +60,13 @@ with col1:
 with col2:
     st.markdown(''' #### $\mathsf{log\\text{-}margin}$''')
     st.markdown('''Limit case for *softmax*, ($\gamma=1$, *i.e.,* $\delta = +\infty$)''')
-    st.latex('''\\begin{align*}
-    s(x,y) &= \|\\bm{z}_{1:k(y)}-z_{k(y)}\mathbf{1}\|_\infty \\nonumber \\\ \\\ &= z_1 - z_{k(y)} \\nonumber
-    = \log \\frac{p_1}{p_{k(y)}}\\nonumber,
-\end{align*}''')
-    #st.markdown(''' ''')
+    #st.latex('''\\begin{align*}
+    #s(x,y) &= \|\\bm{z}_{1:k(y)}-z_{k(y)}\mathbf{1}\|_\infty \\nonumber \\\ \\\ &= z_1 - z_{k(y)} \\nonumber
+    #= \log \\frac{p_1}{p_{k(y)}}\\nonumber,
+#\end{align*}''')
+    st.markdown('''$s(x,y) = \|\\bm{z}_{1:k(y)}-z_{k(y)}\mathbf{1}\|_\infty$''')
+    st.markdown('''$\quad\quad\quad= z_1 - z_{k(y)}$''')
+    st.markdown('''$\quad\quad\quad= \log \\frac{p_1}{p_{k(y)}}$''')
     st.markdown('''**log-odds ratio** between the most probable class and the true one.''')
     st.markdown('''Calibration of this non-conformity score leads to thresholding the odds ratio $p_1/ p_{k(y)}$''')
 with col3:
