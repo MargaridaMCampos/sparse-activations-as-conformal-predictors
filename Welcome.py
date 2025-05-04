@@ -43,6 +43,7 @@ with col1:
     st.markdown(''' - [**Experimental Results**](https://sparse-activations-conformal-predictors.streamlit.app/Experimental_Results) - 
                 summary of our experimental results.''')
     st.markdown(''' - [**About**](https://sparse-activations-conformal-predictors.streamlit.app/About) - author and project information.''')
+
 with col2:
     st.markdown(
     """<a href="https://arxiv.org/pdf/2502.14773">

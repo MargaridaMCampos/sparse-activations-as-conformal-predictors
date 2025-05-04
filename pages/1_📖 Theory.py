@@ -119,7 +119,7 @@ betas = np.sort(np.concat((np.linspace(0.01, 10, 100),np.arange(1,10,dtype=float
 index_list = list(examples_info['samples'].keys())
     #index = index_list[1]
 if "index" not in st.session_state:
-    st.session_state.index = index_list[1]  # or whatever default you want
+    st.session_state.index = index_list[3]  # or whatever default you want
 with st.sidebar:
     if st.button('🔄 New Image',type='tertiary'):
         st.session_state.index = index_list[randint(0,len(index_list)-1)]
